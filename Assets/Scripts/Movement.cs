@@ -25,13 +25,14 @@ public class Movement : MonoBehaviour
     {
         if (playerManager.playerState==PlayerManager.PlayerState.Move)
         {
-            transform.position= transform.position+Vector3.forward*movementSpeed*Time.fixedDeltaTime;
+            transform.Translate(Vector3.forward*movementSpeed*Time.fixedDeltaTime);
         }
         if(isTouching)
         {
             touchPosX += Input.GetAxis("Mouse X")*controlSpeed*Time.fixedDeltaTime;
+            transform.position = new Vector3(touchPosX, transform.position.y, transform.position.z);
         }
-      transform.position=new Vector3(touchPosX,transform.position.y,transform.position.z);
+        
     }
     void GetInput()
     {

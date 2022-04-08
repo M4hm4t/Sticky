@@ -28,6 +28,7 @@ public class FirstPlayer : MonoBehaviour
     {
         isGrounded = true;
         playerManager.playerState = PlayerManager.PlayerState.Move;
+        GetComponent<BoxCollider>().isTrigger = false;
         rb.useGravity = false;
         Destroy(this,1);
     }

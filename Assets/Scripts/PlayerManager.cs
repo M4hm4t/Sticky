@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public LevelState levelState;
     public List<GameObject> collidedList;
     public Transform collectedPollTransform;
+    public Transform particlePrefab;
     public enum PlayerState
     {
         Stop,
@@ -18,5 +19,12 @@ public class PlayerManager : MonoBehaviour
     {
         NotFinished,
         Finised
+    }
+    public void CallMakeSphere()
+    {
+        foreach (GameObject obj in collidedList)
+        {
+            obj.GetComponent<CollectedObjectController>().MakeSphere();
+        }
     }
 }
