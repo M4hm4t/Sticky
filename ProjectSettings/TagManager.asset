@@ -6,12 +6,13 @@ TagManager:
   tags:
   - Ground
   - PlayerManager
-  - CollectableObj
-  - CollectableList
+  - CollectibleObj
+  - CollectedObj
+  - CollectibleList
   - Obstacle
   - Hole
   - FinishLine
-  - Sphere
+  - SphereObj
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - 
   - Water
   - UI
+  - 
+  - 
   - FinishGroundLayer
-  - 
-  - 
   - 
   - 
   - 

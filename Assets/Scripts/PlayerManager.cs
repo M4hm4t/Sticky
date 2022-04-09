@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -7,24 +6,29 @@ public class PlayerManager : MonoBehaviour
     public Material collectedObjMat;
     public PlayerState playerState;
     public LevelState levelState;
+
+    public Transform partcilePrefab;
+
     public List<GameObject> collidedList;
-    public Transform collectedPollTransform;
-    public Transform particlePrefab;
+
+    public Transform collectedPoolTransform;
     public enum PlayerState
     {
         Stop,
         Move
     }
-     public enum LevelState
+    public enum LevelState 
     {
         NotFinished,
-        Finised
+        Finished
     }
-    public void CallMakeSphere()
-    {
-        foreach (GameObject obj in collidedList)
+
+    public void CallMakeSphere () {
+        foreach (GameObject obj in collidedList) {
+            obj.GetComponent<CollectedObjController>().MakeSphere();
+        }
         {
-            obj.GetComponent<CollectedObjectController>().MakeSphere();
+            
         }
     }
 }
