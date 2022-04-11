@@ -12,6 +12,7 @@ public class FirstPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         rb= GetComponent<Rigidbody>();
         GetComponent<Renderer>().material = playerManager.collectedObjMat;
 
@@ -25,6 +26,8 @@ public class FirstPlayer : MonoBehaviour
             Grounded();
         }
     }
+
+   
     void Grounded() {
         isGrounded=true;
         playerManager.playerState = PlayerManager.PlayerState.Move;

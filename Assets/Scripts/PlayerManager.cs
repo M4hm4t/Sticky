@@ -8,7 +8,7 @@ public class PlayerManager : MonoBehaviour
     public LevelState levelState;
 
     public Transform partcilePrefab;
-
+    public Transform partcilePrefab1;
     public List<GameObject> collidedList;
 
     public Transform collectedPoolTransform;
@@ -27,8 +27,6 @@ public class PlayerManager : MonoBehaviour
         foreach (GameObject obj in collidedList) {
             obj.GetComponent<CollectedObjController>().MakeSphere();
         }
-        {
-            
-        }
+        
     }
 }
