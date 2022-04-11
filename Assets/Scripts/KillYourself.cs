@@ -6,6 +6,11 @@ public class KillYourself : MonoBehaviour
 {
      private void OnDestroy()
     {
-        FindObjectOfType<HoleScript>().Restart();
+        //FindObjectOfType<HoleScript>().Restart();
+    }
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 0;  // VSync must be disabled
+        Application.targetFrameRate = 60;
     }
 }
